@@ -44,6 +44,11 @@ class HyperLine extends Component {
             padding-right: 10px;
           }
         `}</style>
+        <style jsx global>{`
+          .terms_terms {
+            bottom: 12px !important;
+          }
+        `}</style>
       </div>
     )
   }
