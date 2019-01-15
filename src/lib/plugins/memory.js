@@ -1,7 +1,6 @@
 import React from 'react'
 import Component from 'hyper/component'
 import { mem as memoryData } from 'systeminformation'
-import leftPad from 'left-pad'
 import SvgIcon from '../utils/svg-icon'
 
 class PluginIcon extends Component {
@@ -70,10 +69,9 @@ export default class Memory extends Component {
     return memoryData().then(memory => {
       const totalMemory = this.getMb(memory.total)
       const activeMemory = this.getMb(memory.active)
-      const totalWidth = totalMemory.toString().length
 
       return {
-        activeMemory: leftPad(activeMemory, totalWidth, 0),
+        activeMemory,
         totalMemory
       }
     })
